@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ne"
+    android:orientation="vertical"
+    tools:context=".SignIn"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <TextView
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="64dp"
+        android:onClick="signup"
+        android:paddingTop="5dp"
+        android:text="Dont Have an Account? Sign Up"
+        android:textColor="#ffff"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="-2dp"
+        android:gravity="center_horizontal"
+        android:text="Account Login"
+
+        android:textColor="#ffff"
+        android:textSize="26sp"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="260dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="128dp"
+        android:elevation="0dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/mailID"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_person_black_24dp"
+                    android:hint="User E-mail"
+                    android:background="@drawable/circle"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#ffffff"
+
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/passID"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/circle"
+                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                    android:hint="Password"
+                    android:textColorHint="#ffffff"
+
+                    android:inputType="numberPassword"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_margin="35dp"
+                android:background="@drawable/circle"
+                android:onClick="login"
+                android:text="Sign in"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/user_profile_photo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/login_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_person_black_24dp"
+        android:elevation="4dp" />
+</RelativeLayout>
